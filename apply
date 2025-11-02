@@ -1,0 +1,10 @@
+#!/bin/bash
+set -e
+cd dotfiles
+sudo xbps-install -S libX11-devel libXft-devel libXinerama-devel pkg-config fontconfig freetype tcc musl-devel
+alias CC="tcc"
+./apply
+sudo xbps-remove -R libX11-devel libXft-devel libXinerama-devel pkg-config fontconfig freetype tcc musl-devel
+cd ..
+./pipewire
+./dark-mode

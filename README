@@ -1,0 +1,9 @@
+VoidLinux
+=========
+
+Installation
+------------
+
+    git clone --recurse-submodules https://github.com/swtchcoder/voidlinux
+    cd voidlinux
+    ./apply
