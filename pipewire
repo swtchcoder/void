@@ -1,9 +1,10 @@
 #!/bin/sh
 set -e
-sudo xbps-install -S dumb_runtime_dir
-sudo xbps-install -S pipewire
-sudo xbps-install -S rtkit
-xbps-install -S xdg-desktop-portal
-mkdir $XDG_CONFIG_HOME/autostart
-ln -s /usr/share/applications/pipewire.desktop $XDG_CONFIG_HOME/autostart/
-ln -s /usr/share/applications/pipewire-pulse.desktop $XDG_CONFIG_HOME/autostart/
+xbps-install -S
+xbps-install --yes dumb_runtime_dir
+xbps-install --yes pipewire
+xbps-install --yes rtkit
+xbps-install --yes xdg-desktop-portal
+mkdir -p $XDG_CONFIG_HOME/autostart
+ln -sf /usr/share/applications/pipewire.desktop $XDG_CONFIG_HOME/autostart/
+ln -sf /usr/share/applications/pipewire-pulse.desktop $XDG_CONFIG_HOME/autostart/
