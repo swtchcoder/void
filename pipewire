@@ -1,10 +1,5 @@
 #!/bin/sh
 set -e
 xbps-install -S
-xbps-install --yes dumb_runtime_dir
-xbps-install --yes pipewire
-xbps-install --yes rtkit
-xbps-install --yes xdg-desktop-portal
-mkdir -p $XDG_CONFIG_HOME/autostart
-ln -sf /usr/share/applications/pipewire.desktop $XDG_CONFIG_HOME/autostart/
-ln -sf /usr/share/applications/pipewire-pulse.desktop $XDG_CONFIG_HOME/autostart/
+xbps-install -u --yes dumb_runtime_dir pipewire wireplumber rtkit dbus
+ln -sf /etc/sv/dbus /var/service/

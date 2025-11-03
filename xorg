@@ -1,0 +1,4 @@
+#!/bin/sh
+set -e
+xbps-install -S
+xbps-install -u --yes xorg-minimal xinit xwallpaper xclip adwaita-icon-theme gnome-themes-extra 7zip
