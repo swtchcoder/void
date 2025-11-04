@@ -1,6 +1,5 @@
 #!/bin/sh
 set -e
-xbps-install -S
 cd $1
 xbps-install -u --yes libX11-devel libXft-devel libXinerama-devel pkg-config fontconfig freetype gcc make curl
 ./all
